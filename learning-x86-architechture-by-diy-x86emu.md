@@ -409,6 +409,8 @@ c言語の世界ではメモリに名前を付ける機能があり、それを�
 
 ### ２－３：初めてのエミュレータ
 
+（あとから挿入　本文では、main.cの全文解説は行われていないので、フォルダtolset_p86\emu2.3を見よ
+
 
 まず、エミュ本体を表す構造体を定義する。
 次に、エミュ構造体を生成して初期化し、ファイルから機械語プログラムを読み込む処理を書いてゆく。
@@ -488,14 +490,30 @@ destory_emu(emu);
 return　0;
 }
 
+main.cのソースコード解説部分はここでパスすることにする。
+このエミュに実装した命令は、即値をレジスタに書き込むmovとショートジャンプのjmpのみである。
+ゆえに、以下のようなファイルhellowworld.asmのプログラムを起動できる
 
 
+hellowworld.asm
+BIT 32
+start:
+    mov eax,41
+    jmp short start
 
+tolset_p86\pasm-helloworldにある!cons_nt.batを実行せよ。
+そして現れるターミナルにて、makeを実行せよ。
+すると、helloworld.binが作られる。
 
+次にエミュをビルドする。
+tolset_p86\emu2.3の!cons_nt.batを実行せよ。
+そして現れるターミナルにて、makeを実行せよ。
+すると、px86.exeが作られる。
 
+この状態で、
+px86.exe ..\pasm-helloworld\helloworld.bin
 
-
-
+レジスタeaxの値が29なら成功　ｏｋ
 
 
 
