@@ -570,6 +570,19 @@ void func(void){
 
 ### ２－８：関数ポインタ
 
+間接参照、参照外し、dereferenceを復習。
+
+リスト2.21
+Emulator emu;
+Emulator *p=&emu;
+(*p).eflags＝０;
+p->eip＝０;
+
+
+
+
+
+
 
 ## chap.3 ＣＰＵがプログラムを実行する仕組み
 
