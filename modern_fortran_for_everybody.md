@@ -121,6 +121,21 @@ end progran P-name
 
 追記
 
+注釈いろいろ
+
+Ｃ言語：行頭だけでなく、末を閉じねばならない
+/*　　　＊/
+
+ｃ＋＋なら、//も注釈に
+'　で始まるVisual Basic、
+#ならUNIX系のシェルスクリプト
+FORTRAN　先頭文字がＣ、*
+Pascal　{}、(* *) に囲まれた部分。
+COBOL固定形式：標識領域（7桁目）に「*」または「/」を記述します。
+自由形式：「*>」を記述します。記述する桁に特に制限はありません。
+　記号（*、/、*>）以降、その行は全てコメントとして扱われます。
+COBOLでは、SECTIONの終わりには、必ずピリオドが必要です。
+
 http://macroscope.world.coocan.jp/ja/edu/computer/proglang/fort_pas.html
 
 ◎行と文
